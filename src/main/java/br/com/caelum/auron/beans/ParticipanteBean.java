@@ -1,5 +1,7 @@
 package br.com.caelum.auron.beans;
 
+import java.util.List;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -25,5 +27,9 @@ public class ParticipanteBean {
 
 	public void setParticipante(Participante participante) {
 		this.participante = participante;
+	}
+	
+	public List<Participante> getParticipantes(){
+		return participanteDao.getParticipantes();
 	}
 }
